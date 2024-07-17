@@ -1,0 +1,23 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login Page";
+}
+@section button
+{
+<style>
+    #login-toggle{
+  background:#57b846;
+  color:#ffff;
+}
+</style>
+}
+    <div id="login-form">
+        <form  name="login" onsubmit="return validatelogin()" method="post" asp-controller="Form" asp-action="Login">
+            <input type="text" asp-for="Username"  placeholder="نام کاربری "/>
+            <input type="password" asp-for="Password"  placeholder="رمز عبور"/>
+            <p id="error-login" style="color:red;"></p>
+            <button type="submit" class="btn login" name="login" value="login" >ورود</button>
+            <p style="color:red;">@TempData["message"]</p>
+        </form>
+    </div>
+
