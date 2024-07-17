@@ -1,0 +1,28 @@
+﻿@model SignupViewModel
+@{
+    ViewData["Title"] = "Signup page";
+}
+@section button
+{
+<style>
+ #signup-toggle
+{
+  background:#57b846;
+  color:#ffff;
+}
+</style>
+
+}
+    <div id="signup-form">
+        <form name="signup" onsubmit="return validatesignup()" method="post" asp-controller="Form" asp-action="Signup" >
+            <input type="text" asp-for="Phone"   placeholder="شماره موبایل"/>
+            <input type="text" asp-for="Username"  placeholder="نام کاربری"/>
+            <input type="password" asp-for="Password"  placeholder="رمز عبور"/>
+            <input type="password" name="signup-pass_2" placeholder="تکرار رمز عبور">
+            <p id="error-signup" style="color:red;"></p>
+            <button type="submit" class="btn signup"  name="signup" value="signup">ایجاد حساب</button>
+             <p style="color:red;">@TempData["message"]</p>
+        </form>
+    </div>
+
+
