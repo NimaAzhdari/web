@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap 5 Project</title>
+  <link href="../bootstrap-5.3.3/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <style>
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    .full-height {
+        height: 100%;
+    }
+</style>
+</head>
+<body>
+<div class="d-flex justify-content-center align-items-center bg-black full-height">
+  <div class="container-sm bg-white rounded w-50">
+    <div class="row row-cols-2 mt-1 mb-3">
+      <button class="col btn py-3 rounded">ورود</button>
+      <button class="col btn py-3 bg-dark-subtle rounded">ثبت نام</button>
+    </div>
+    <form action="#">
+        <div class="form-floating mt-2 mb-2">
+            <input type="text" id="phone" placeholder="شماره تماس" class="form-control">
+            <label for="phone">شماره تماس</label>
+          </div>
+          <div class="form-floating mt-2 mb-2">
+            <input type="text" id="username" placeholder="نام کاربری" class="form-control">
+            <label for="username">نام کاربری</label>
+          </div>
+      <div class="form-floating mt-2 mb-2">
+        <input type="password" id="pwd" placeholder="رمز عبور" class="form-control">
+        <label for="pwd">رمز عبور</label>
+      </div>
+      <div class="form-floating mt-2 mb-2">
+        <input type="password" id="pwd2" placeholder="تکرار رمز عبور" class="form-control">
+        <label for="pwd2">تکرار رمز عبور</label>
+      </div>
+     <div class="d-grid mt-4 mb-1 ">
+        <button type="submit" class="btn btn-lg bg-black text-white rounded">ارسال</button>
+      </div>
+      </form>
+  </div>
+  </div>
+</body>
+</html>
