@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> نشاط</title>
+  <link href="/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="/lib/bootstrap/dist/css/bootstrap-icons.min.css" rel="stylesheet">
+  <style>
+    .main-bg{background-color: #228B22;}
+  </style>
+</head>
+<body>
+
+    <header>
+       <div >
+      <nav class="navbar navbar-expand-md rounded-bottom-2 main-bg">
+
+        <a class="navbar-brand px-2" href="#">
+            <img src="/image/logo.png">
+        </a> 
+    
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#items">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="items">
+        <ul class="navbar-nav">
+            <li class="nav-item px-2">
+                <a href="#" class="nav-link text-white">محصولات</a>
+            </li>
+            <li class="nav-item px-2">
+                <a href="#" class="nav-link text-white">ارتباط با ما</a>
+            </li>
+        </ul>
+    </div>  
+    </nav>
+    </div>
+    <div>
+        @await Component.InvokeAsync("Basket")
+    </div>
+    </header>
+
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="container-fluid main-bg">
+            <div class="row row-cols-3">
+                <div class="col">
+                    <p class="text-white">اطلاعات کسب و کار</p>
+                </div>
+                <div class="col">
+                    <p class="text-white">اطلاعات کسب و کار</p>
+                </div>
+                <div class="col">
+                    <p class="text-white">اطلاعات کسب و کار</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
