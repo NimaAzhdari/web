@@ -1,0 +1,9 @@
+﻿@model MvcRazor.Models.Basket;
+@if(Model.Items.Any())
+{
+    <a asp-page="/Orders" type="button" class="btn btn-sm btn-success">
+    <i class="bi bi-cart"></i>
+    <span class="rounded-pill bg-white text-black">@Model.NumberOfItems</span>
+    </a>
+}
+
