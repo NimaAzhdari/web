@@ -1,0 +1,38 @@
+﻿@page
+@model MvcRazor.Pages.OrdersModel
+@if(Model.basket.NumberOfItems > 0)
+{
+    <table class="table table-sm table-hover table-borderless">
+        <thead class="table-success">
+            <tr>
+                <th>کالا</th>
+                <th>تعداد</th>
+                <th>قیمت</th>
+                <th>مجموع</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in  Model.basket.Items )
+            {
+                var selectedProducts=Model.SelectedProducts.First(x => x.Code == item.ProductCode);
+                <tr>
+                    <td>@selectedProducts.Name</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Price</td>
+                    <td>@(item.Price * item.Quantity)</td>
+                </tr>
+
+            }
+
+        </tbody>
+        <tfoot class="border-top">
+            <td>جمع کل</td>
+            <td>@Model.basket.Items.Sum(x => x.Quantity * x.Price)</td>
+        </tfoot>
+
+    </table>
+}
+else
+{
+    <h1>سبد شما خالی است</h1>
+}

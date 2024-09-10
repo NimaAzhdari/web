@@ -1,0 +1,27 @@
+﻿@page "{Code:int}"
+@model MvcRazor.Pages.ProductModel
+@{
+}
+ <div class="d-flex justify-content-between w-100 ">
+        
+        <div>
+            <img src="/image/@Model.Product.ImageMd" alt="">
+        </div>
+
+        <div class="d-flex flex-column border border-3 w-50">
+          <h2 class="p-2">@Model.Product.Description</h2>
+          <div class="d-flex p-2">
+            <h4>قیمت هر</h4>
+            <h4>@Model.Product.type :</h4>
+            <h4 >@Model.Product.Price</h4>
+          </div>
+          <form asp-page="Product" class="d-flex flex-column" method="post">
+                <span >تعداد</span>
+                <input type="number" asp-for="Quantity_form"/>
+                <span asp-validation-for="Quantity_form" class="text-danger"></span>
+                 <input type="hidden" asp-for="ProductCode_form" value="@Model.Product.Code"/>
+                <button type="submit" class="btn btn-block bg-success text-white ">افزودن به سبدخرید</button>
+            </form>
+        </div>
+
+    </div>
